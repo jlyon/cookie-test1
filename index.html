@@ -1,0 +1,21 @@
+<html>
+<body>
+<h1>Microsite</h1>
+
+
+Enter value to store
+<input type="text" id="input" />
+<button onclick="setCookie()">Save cookie</button>
+
+<a href="//jb-shopify.theshoppad.net">Go to "Shopify Store"</a>
+<script>
+  function setCookie() {
+    $.cookie('jb_token', $('#input').val(), { expires : 1000, domain: '.theshoppad.net' });
+    alert('Cookie set to ' + $('#input').val());
+  }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.cookie/1.1/jquery.cookie.js"></script>
+</body>
+</html>
